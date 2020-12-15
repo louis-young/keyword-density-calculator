@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Form from "./components/Form/Form";
-import List from "./components/List/List";
+import Table from "./components/Table/Table";
 
 import "./stylesheets/main.scss";
 
@@ -61,9 +61,9 @@ const App = () => {
   };
 
   return (
-    <section className="application">
+    <section className="application container container--extra-large">
       <Form setContent={setContent} />
-      <List densities={calculateKeywordDensity()} />
+      <Table densities={calculateKeywordDensity()} />
     </section>
   );
 };

@@ -1,0 +1,15 @@
+@import "../../stylesheets/abstracts/breakpoints";
+@import "../../stylesheets/abstracts/variables";
+
+.form {
+  &__input {
+    background: $primary-color-light;
+    border: unset;
+    width: 100%;
+    min-height: 300px;
+  }
+  &__submit {
+    display: block;
+    margin-top: 1rem;
+  }
+}

@@ -1,9 +1,12 @@
 $ratio: 15%;
 
-$primary-color: hotpink;
+$primary-color: #4156d0;
+$primary-color-light: #f1f7ff;
+
+$light-grey: #f7f7f7;
+$medium-grey: #ececec;
 
 $primary-color-dark: darken($primary-color, $ratio);
-$primary-color-light: lighten($primary-color, $ratio);
 
 $secondary-color: lightsteelblue;
 

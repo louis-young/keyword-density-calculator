@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Form.scss";
+
 const Form = ({ setContent }) => {
   const [value, setValue] = useState("");
 
@@ -10,10 +12,17 @@ const Form = ({ setContent }) => {
   };
 
   return (
-    <form onSubmit={submit}>
-      <textarea value={value} onChange={(event) => setValue(event.target.value)} required></textarea>
+    <form className="form" onSubmit={submit}>
+      <textarea
+        value={value}
+        className="form__input"
+        onChange={(event) => setValue(event.target.value)}
+        required
+      ></textarea>
 
-      <button type="submit">Calculate</button>
+      <button type="submit" className="form__submit button">
+        Analyse
+      </button>
     </form>
   );
 };
