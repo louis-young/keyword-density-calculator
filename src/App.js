@@ -5,36 +5,46 @@ const App = () => {
 
   const [occurrences, setOccurrences] = useState([]);
 
-  const count = (event) => {
+  const calculateDensity = (event) => {
     event.preventDefault();
 
     const words = content.match(/\b(\w+)\b/g).map((word) => word.toLowerCase());
 
-    const counts = words.reduce((accumulator, word) => {
+    const occurrences = words.reduce((accumulator, word) => {
       accumulator[word] ? accumulator[word]++ : (accumulator[word] = 1);
 
       return accumulator;
     }, {});
 
-    const occurrences = Object.entries(counts).sort(([, a], [, b]) => {
+    const sortedOccurrences = Object.entries(occurrences).sort(([, a], [, b]) => {
       return b - a;
     });
 
-    setOccurrences(occurrences);
+    const occurrencesWithDensity = sortedOccurrences.map((occurrence) => {
+      const [key, value] = occurrence;
+
+      const percentage = (value / words.length) * 100;
+
+      const density = Math.round(percentage * 100) / 100;
+
+      return [key, value, density];
+    });
+
+    setOccurrences(occurrencesWithDensity);
   };
 
   return (
     <section className="application">
-      <form onSubmit={count}>
+      <form onSubmit={calculateDensity}>
         <textarea value={content} onChange={(event) => setContent(event.target.value)} required></textarea>
 
         <button type="submit">Count</button>
       </form>
 
       <ul>
-        {occurrences.map(([key, value], index) => (
-          <li key={value}>
-            {index + 1} - {value}:{key}
+        {occurrences.map(([key, value, density], index) => (
+          <li key={key}>
+            {index + 1} - {value} - {key} - {density}%
           </li>
         ))}
       </ul>
