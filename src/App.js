@@ -26,7 +26,7 @@ const App = () => {
     return occurrences;
   };
 
-  const sortOccurrences = (occurrences) => {
+  const sortOccurrencesDescending = (occurrences) => {
     const sortedOccurrences = Object.entries(occurrences).sort(([, a], [, b]) => b - a);
 
     return sortedOccurrences;
@@ -53,7 +53,7 @@ const App = () => {
 
     const occurrences = calculateOccurrences(words);
 
-    const sortedOccurrences = sortOccurrences(occurrences);
+    const sortedOccurrences = sortOccurrencesDescending(occurrences);
 
     const densities = sortedOccurrences.map((occurrence) => addDensityPercentile(occurrence, words));
 
