@@ -1,13 +1,14 @@
 import React from "react";
 
-const List = ({ occurrences }) => {
+const List = ({ densities }) => {
   return (
     <ul>
-      {occurrences.map(([key, value, density], index) => (
-        <li key={key}>
-          {index + 1} - {value} - {key} - {density}%
-        </li>
-      ))}
+      {densities &&
+        densities.map(({ word, occurrences, density }, index) => (
+          <li key={word}>
+            {index + 1} - {occurrences} - {word} - {density}%
+          </li>
+        ))}
     </ul>
   );
 };
