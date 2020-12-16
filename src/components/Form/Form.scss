@@ -4,6 +4,28 @@
 @import "../../stylesheets/base/typography";
 
 .form {
+  position: relative;
+  &:before {
+    @extend %pseudo;
+    $radius: 3px;
+    $spacing: 20px;
+    position: absolute;
+    top: -3.5rem;
+    left: -3.5rem;
+    width: 420px;
+    height: 250px;
+    z-index: -1;
+    background-image: radial-gradient(circle at $radius $radius, black $radius, transparent 0);
+    background-size: $spacing $spacing;
+    opacity: 0.15;
+    display: none;
+    @include laptop {
+      display: block;
+    }
+    @include desktop {
+      width: 500px;
+    }
+  }
   &__input,
   &__submit {
     @extend %round;
