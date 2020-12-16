@@ -1,4 +1,4 @@
-const insignificantWords = new Set([
+export const insignificantWords = new Set([
   "a",
   "able",
   "about",
@@ -660,5 +660,3 @@ const insignificantWords = new Set([
   "z",
   "zero",
 ]);
-
-export default insignificantWords;

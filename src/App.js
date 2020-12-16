@@ -5,7 +5,7 @@ import Content from "./components/Content/Content";
 import Form from "./components/Form/Form";
 import Table from "./components/Table/Table";
 
-import insignificantWords from "./data/insignificantWords";
+import { insignificantWords } from "./data/constants";
 
 import "./stylesheets/main.scss";
 
