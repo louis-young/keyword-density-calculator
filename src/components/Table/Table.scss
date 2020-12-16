@@ -16,16 +16,16 @@
     color: $dark-text;
     font-weight: $semi-bold;
     border-bottom: solid $dark-grey 1px;
-    font-size: 0.85rem;
-    padding: $mobile-padding 0;
+    font-size: 0.95rem;
+    padding: $mobile-padding;
     @include tablet {
       font-size: 1.15rem;
-      padding: $desktop-padding 0;
+      padding: $desktop-padding;
     }
   }
   &__row {
     &:nth-child(even) {
-      background-color: $light-grey;
+      background-color: $primary-color-lighter;
     }
   }
   &__row,
@@ -37,7 +37,8 @@
   }
   &__cell {
     border: solid $dark-grey 1px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+
     @include tablet {
       font-size: 1rem;
     }
@@ -46,6 +47,15 @@
     }
     &:last-of-type {
       border-right: unset;
+    }
+    &--keyword {
+      font-size: 0.825rem;
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+    &--rank {
+      font-weight: $medium;
     }
   }
 }

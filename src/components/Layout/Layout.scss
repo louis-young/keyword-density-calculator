@@ -27,6 +27,8 @@
     grid-area: content;
   }
   &__bottom {
+    max-width: 100%;
+    overflow: auto;
     @include laptop {
       grid-column: span 2;
     }

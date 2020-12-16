@@ -5,17 +5,29 @@ import Content from "./components/Content/Content";
 import Form from "./components/Form/Form";
 import Table from "./components/Table/Table";
 
+import insignificantWords from "./data/insignificantWords";
+
 import "./stylesheets/main.scss";
 
 const App = () => {
   const [content, setContent] = useState("");
 
-  const splitWords = (text) => {
-    const words = text.match(/\b(\w+)\b/g) || [];
-
+  const convertWordsToLowerCase = (words) => {
     const lowerCaseWords = words.map((word) => word.toLowerCase());
 
     return lowerCaseWords;
+  };
+
+  const splitWords = (text) => {
+    const words = text.match(/\b(\w+)\b/g) || [];
+
+    return words;
+  };
+
+  const getKeywords = (words) => {
+    const keywords = words.filter((word) => !insignificantWords.has(word) && isNaN(word));
+
+    return keywords;
   };
 
   const calculateOccurrences = (words) => {
@@ -53,7 +65,11 @@ const App = () => {
   const calculateKeywordDensity = () => {
     const words = splitWords(content);
 
-    const occurrences = calculateOccurrences(words);
+    const lowerCaseWords = convertWordsToLowerCase(words);
+
+    const keywords = getKeywords(lowerCaseWords);
+
+    const occurrences = calculateOccurrences(keywords);
 
     const sortedOccurrences = sortOccurrencesDescending(occurrences);
 

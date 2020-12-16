@@ -7,9 +7,9 @@ const Content = () => {
     <article className="content">
       <h1 className="content__title">Keyword Density Tool</h1>
       <p className="content__text">
-        A handy tool to analyse keyword density within content. Simply paste your content, click "Analyse" and view the
-        results in the table below. The application will rank your keywords on frequency/occurrence, show you how many
-        times they appear and their density percentile compared to all of the keywords in the content.
+        A handy tool to analyse keyword density within content. Simply paste your content in, click "Analyse", then view
+        the results in the table below. The application will rank your keywords by occurrence, show you how many times
+        they appear and their density percentile compared to all of the keywords in the content.
       </p>
 
       <p className="content__text">
