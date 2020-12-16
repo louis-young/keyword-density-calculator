@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import "./Form.scss";
 
 const Form = ({ setContent }) => {
   const [value, setValue] = useState("");
+
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const submit = (event) => {
     event.preventDefault();
@@ -14,10 +20,12 @@ const Form = ({ setContent }) => {
   return (
     <form className="form" onSubmit={submit}>
       <textarea
+        ref={inputRef}
         value={value}
-        className="form__input"
         onChange={(event) => setValue(event.target.value)}
         required
+        className="form__input"
+        placeholder="Start typing or paste some content..."
       ></textarea>
 
       <button type="submit" className="form__submit button">

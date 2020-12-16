@@ -7,7 +7,7 @@ const Table = ({ densities }) => {
     <table className="table">
       <thead>
         <tr className="table__row">
-          <th className="table__header">Result</th>
+          <th className="table__header">Rank</th>
           <th className="table__header">Keyword</th>
           <th className="table__header">Occurrences</th>
           <th className="table__header">Density</th>

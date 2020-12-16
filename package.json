@@ -1,6 +1,7 @@
 {
   "name": "coding-test",
   "version": "0.1.0",
+  "homepage": "/keyword-density-tool",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",

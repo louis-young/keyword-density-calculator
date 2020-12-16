@@ -1,9 +1,0 @@
-.application {
-  padding: 2rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  @include laptop {
-    padding: 4rem;
-  }
-}

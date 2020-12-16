@@ -1,0 +1,17 @@
+@import "../../stylesheets/abstracts/breakpoints";
+@import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/base/typography";
+
+.content {
+  &__title {
+    @extend %h2;
+    line-height: 1;
+    font-weight: $semi-bold;
+    padding-top: unset;
+  }
+  &__text {
+    &:last-of-type {
+      padding-bottom: unset;
+    }
+  }
+}

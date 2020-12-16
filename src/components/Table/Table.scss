@@ -3,15 +3,25 @@
 @import "../../stylesheets/base/typography";
 
 .table {
-  $padding: 1.5rem;
+  $mobile-padding: 0.75rem;
+  $desktop-padding: 1.5rem;
   border-collapse: collapse;
   width: 100%;
   text-align: left;
+
+  @include laptop {
+    margin-top: 2rem;
+  }
   &__header {
     color: $dark-text;
     font-weight: $semi-bold;
-    border-bottom: solid $medium-grey 1px;
-    padding: $padding 0;
+    border-bottom: solid $dark-grey 1px;
+    font-size: 0.85rem;
+    padding: $mobile-padding 0;
+    @include tablet {
+      font-size: 1.15rem;
+      padding: $desktop-padding 0;
+    }
   }
   &__row {
     &:nth-child(even) {
@@ -20,10 +30,17 @@
   }
   &__row,
   &__cell {
-    padding: $padding;
+    padding: $mobile-padding;
+    @include tablet {
+      padding: $desktop-padding;
+    }
   }
   &__cell {
-    border: solid $medium-grey 1px;
+    border: solid $dark-grey 1px;
+    font-size: 0.85rem;
+    @include tablet {
+      font-size: 1rem;
+    }
     &:first-of-type {
       border-left: unset;
     }

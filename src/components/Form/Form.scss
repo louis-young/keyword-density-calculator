@@ -1,15 +1,25 @@
 @import "../../stylesheets/abstracts/breakpoints";
 @import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/abstracts/extends";
+@import "../../stylesheets/base/typography";
 
 .form {
+  &__input,
+  &__submit {
+    @extend %round;
+  }
   &__input {
     background: $primary-color-light;
     border: unset;
     width: 100%;
     min-height: 300px;
+    &::placeholder {
+      opacity: 0.75;
+    }
   }
   &__submit {
     display: block;
+    width: 100%;
     margin-top: 1rem;
   }
 }

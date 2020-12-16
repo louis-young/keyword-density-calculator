@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Montserrat:400,500");
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,500,600");
 
 $body-font-family: "Montserrat", sans-serif;
 
@@ -104,9 +104,9 @@ address {
 
 %p {
   font-size: 16px;
-  padding: 0.5rem 0;
+  padding-bottom: 0.5rem;
   @include tablet {
-    padding: 1rem 0;
+    padding-bottom: 1rem;
   }
 }
 

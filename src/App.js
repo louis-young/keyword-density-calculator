@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Layout from "./components/Layout/Layout";
+import Content from "./components/Content/Content";
 import Form from "./components/Form/Form";
 import Table from "./components/Table/Table";
 
@@ -61,10 +63,11 @@ const App = () => {
   };
 
   return (
-    <section className="application container container--extra-large">
-      <Form setContent={setContent} />
-      <Table densities={calculateKeywordDensity()} />
-    </section>
+    <Layout
+      left={<Form setContent={setContent} />}
+      right={<Content />}
+      bottom={<Table densities={calculateKeywordDensity()} />}
+    />
   );
 };
 
