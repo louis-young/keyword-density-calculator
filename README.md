@@ -1,6 +1,6 @@
 # Keyword Density Tool
 
-This application analyses user-supplied content and calculates the occurrences and densities of keywords within it.
+React application for calculating the density of keywords within content.
 
 ![Keyword Density Tool](documentation/keyword-density-tool.jpg)
 
