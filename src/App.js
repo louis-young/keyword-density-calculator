@@ -62,7 +62,7 @@ const App = () => {
     return { word, occurrences, density };
   };
 
-  const calculateKeywordDensity = () => {
+  const calculateKeywordDensities = () => {
     const words = splitWords(content);
 
     const lowerCaseWords = convertWordsToLowerCase(words);
@@ -78,12 +78,10 @@ const App = () => {
     return densities;
   };
 
+  const densities = calculateKeywordDensities();
+
   return (
-    <Layout
-      left={<Form setContent={setContent} />}
-      right={<Content />}
-      bottom={<Table densities={calculateKeywordDensity()} />}
-    />
+    <Layout left={<Form setContent={setContent} />} right={<Content />} bottom={<Table densities={densities} />} />
   );
 };
 
