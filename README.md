@@ -1,16 +1,16 @@
-# Keyword Density Tool
+# Keyword Density Calculator
 
-A React application for calculating the density of keywords within content.
+An application to calculate the density and occurrences of keywords within given content.
 
-![Keyword Density Tool](documentation/keyword-density-tool.jpg)
+![Keyword Density Calculator](documentation/keyword-density-calculator.jpg)
 
 ## Description
 
-This is an application which calculates the densities of keywords within content, and provides a table detailing the occurrences of each keyword and the density percentage.
+An application that calculates and displays the density, density percentage and the occurrences of keywords within given content in a table.
 
 ## Motivation
 
-I built this application to benefit some peers at work who wanted a clean and concise way to calculate these metrics for writing content for website SEO.
+This was built to aid colleagues at a web development agency in writing content for website search engine optimisation (SEO and META data) and social media marketing.
 
 ### Available Scripts
 
