@@ -16,6 +16,7 @@ This project was built to aid colleagues at a web development agency in writing 
 
 - JavaScript.
 - React.
+- Sass (BEM).
 
 ### Available Scripts
 
