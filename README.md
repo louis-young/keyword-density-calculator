@@ -12,7 +12,7 @@ A tool that calculates and displays the density, density percentage and the occu
 
 This project was built to aid colleagues at a web development agency in writing content for website search engine optimisation (SEO and META data) and social media marketing.
 
-## Techngologies
+## Technologies
 
 - JavaScript.
 - React.
