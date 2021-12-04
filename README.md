@@ -1,12 +1,12 @@
 # Keyword Density Calculator
 
-An application to calculate the density and occurrences of keywords within given content.
+A tool that calculates the density and occurrences of keywords within given content.
 
 ![Keyword Density Calculator](documentation/keyword-density-calculator.jpg)
 
 ## Description
 
-An application that calculates and displays the density, density percentage and the occurrences of keywords within given content in a table.
+A tool that calculates and displays the density, density percentage and the occurrences of keywords within given content in a table.
 
 ## Motivation
 
