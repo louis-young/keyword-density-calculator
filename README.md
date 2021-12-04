@@ -18,6 +18,8 @@ This project was built to aid colleagues at a web development agency in writing 
 - React.
 - Sass (BEM).
 
+---
+
 ### Available Scripts
 
 In the project directory, you can run:
