@@ -20,6 +20,8 @@ This project was built to aid colleagues at a web development agency in writing 
 
 ---
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ### Available Scripts
 
 In the project directory, you can run:
