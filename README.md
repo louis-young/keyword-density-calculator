@@ -10,7 +10,13 @@ An application that calculates and displays the density, density percentage and 
 
 ## Motivation
 
-This was built to aid colleagues at a web development agency in writing content for website search engine optimisation (SEO and META data) and social media marketing.
+This project was built to aid colleagues at a web development agency in writing content for website search engine optimisation (SEO and META data) and social media marketing.
+
+## Techngologies
+
+- JavaScript.
+- React.
+- Ramda.
 
 ### Available Scripts
 
