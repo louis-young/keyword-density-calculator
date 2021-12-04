@@ -1,3 +1,5 @@
+⚠️ Please note that this is an old project and does not reflect the quality of my current work.
+
 # Keyword Density Calculator
 
 A tool that calculates the density and occurrences of keywords within given content.
